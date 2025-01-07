@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
+    "bootstrap": "^5.3.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.7",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.28.1",
+    "uuid": "^11.0.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
+    "@types/react-router-dom": "^5.3.3"
+  }
+}
