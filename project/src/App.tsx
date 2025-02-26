@@ -6,13 +6,11 @@ import Login from './components/Auth/Login';
 import Logout from './components/Auth/Logout';
 import Profile from './components/Auth/Profile';
 import ProtectedRoute from './components/Auth/ProtectedRoute';
+import TaskForm from './components/TaskForm';
+import TaskDetails from './components/TaskDetails';
 
 const App: React.FC = () => {
   const { isAuthenticated, isLoading, error } = useAuth0();
-
-  console.log('isLoading:', isLoading);
-  console.log('isAuthenticated:', isAuthenticated);
-  console.log('Auth0 error:', error);
 
   if (isLoading) {
     return <div>Loading..</div>;
@@ -28,6 +26,8 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/taskform" element={<TaskForm />} />
+        <Route path="/taskdetails/:id" element={<TaskDetails />} />
         <Route path="/dashboard" element={<ProtectedRoute element={<TaskDashboard />} />} />
         <Route path="/" element={isAuthenticated ? <TaskDashboard /> : <Login />} />
       </Routes>
